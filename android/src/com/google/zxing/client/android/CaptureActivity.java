@@ -526,6 +526,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
+    resultHandler.handleButtonPress(3);//GUGA
+    if(true) return;
     if (resultHandler.getDefaultButtonID() != null && prefs.getBoolean(PreferencesActivity.KEY_AUTO_OPEN_WEB, false)) {
       resultHandler.handleButtonPress(resultHandler.getDefaultButtonID());
       return;

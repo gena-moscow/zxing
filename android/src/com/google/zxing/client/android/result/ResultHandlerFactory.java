@@ -32,6 +32,7 @@ public final class ResultHandlerFactory {
 
   public static ResultHandler makeResultHandler(CaptureActivity activity, Result rawResult) {
     ParsedResult result = parseResult(rawResult);
+    if (true) return new TextResultHandler(activity, result, rawResult); //GUGA
     switch (result.getType()) {
       case ADDRESSBOOK:
         return new AddressBookResultHandler(activity, result);
